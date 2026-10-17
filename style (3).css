@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #2b6cb0;
+  --blue-dark: #1e4e8c;
+  --danger: #c0392b;
+  --danger-dark: #922b21;
+  --muted: #666666;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #222222;
+  background-color: #f2f5f7;
+}
+
+header {
+  background-color: #1f4e5f;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+}
+
+header p {
+  margin: 0;
+}
+
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+}
+
+button {
+  align-self: flex-start;
+  padding: 10px 18px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--blue-dark);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: var(--blue);
+}
+
+/* Status messages: one distinct style for each state */
+#status {
+  min-height: 2.5em;
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.status-loading {
+  color: #1f4e8c;
+  background-color: #e8f0fb;
+}
+
+.status-success {
+  color: #1e6b34;
+  background-color: #e6f4ea;
+  border: 1px solid #9fd3ad;
+}
+
+.status-error {
+  color: #8b1e1e;
+  background-color: #fdecea;
+  border: 1px solid #f1a9a0;
+}
+
+/* Notes list */
+#notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.note-card {
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid var(--blue);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.note-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+.note-card p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: var(--danger);
+}
+
+.delete-btn:hover {
+  background-color: var(--danger-dark);
+}
+
+.empty-message {
+  font-style: italic;
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  padding: 24px 16px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 0 12px;
+  }
+}
